@@ -73,7 +73,7 @@ $user_id=$_SESSION['user']['user_id'];
                                 <input type="hidden" name="from_id" value="<?php  echo $from_id; ?>">
                                 <input type="text" name="msg" class="form-control text-white" placeholder="please enter message">
                                 <div class="col-md-4" style="display: block;">
-                                <button type="submit" class="form-control" name="send">Send</button>
+                                <button type="submit" class="form-control" name="send"> Send</button>
                                 </div>                          
                             </div>
                         </div>
@@ -105,10 +105,12 @@ $user_id=$_SESSION['user']['user_id'];
   xhttp.send();
   }
   dataLoad();
+  $("#myDIV").animate({
+    scrollTop:1410},"slow");
+  console.log($('#chat-display.card-body')[0].scrollHeight);
 
-  const element = document.getElementById("#myDiv");
-  let y = element.scrollTop;
-  document.getElementById ("demo").innerHTML = "Horizontally: " + x.toFixed() + "<br>Vertically: " + y.toFixed();
+  
+
     </script>
     </body>
 </html>

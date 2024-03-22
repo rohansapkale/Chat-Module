@@ -14,10 +14,11 @@ $to_id=$_REQUEST['to_id'];
      $user_name=$_SESSION['user']['name'];
      $from_name=ucfirst($user_name);
      while($msg=mysqli_fetch_array($res))
+     
                         {
                            $sender=$msg['from_id']==$from_id?$from_name:$to['name'];
                             $align=$msg['from_id']==$from_id?'right':'left';
-                            echo "<div class='text-white'  style='text-align:$align;'>";
+                            echo "<div class='text-white msg-data'  style='text-align:$align;'>";
                             echo "<b>$sender</b>:";
                             echo $msg['msg'];
                             echo "<br>";
